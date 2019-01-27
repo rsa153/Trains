@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Train Schedule</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color:#474FD3; color: white;">
+            <h1 class="text-center"><strong>Anytime is Train Time</strong></h1>
+            <p>
+                <h6 class="text-center">Choo Choo!</h6>
+            </p>
+        </div>
+        <div class="current-schedule">
+            <div class="card">
+                <div class="card-header" style="background-color:#474FD3; color: white;"><strong>Current Train Schedule</strong></div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="text-center">
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </thead>
+                        <tbody class="body text-center" id='train-table'>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="add-train">
+            <div class="card">
+                <div class="card-header" style="background-color:#474FD3; color: white"><strong>Add Train</strong></div>
+                <div class="card-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="name"><strong>Train Name</strong></label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="name"><strong>Destination</strong></label>
+                            <input type="text" class="form-control" id="destination">
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date"><strong>First Train Time (HH:mm)</strong></label>
+                            <input type="text" class="form-control" id="first-train">
+                        </div>
+                        <div class="form-group">
+                            <label for="rate"><strong>Frequency (in minutes)<strong></label>
+                            <input type="text" class="form-control" id="frequency">
+                        </div>
+                        <button type="submit" class="btn" id="submit" style="background-color:#474FD3; color: white"><strong>Submit</strong></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/javascript/js.js"></script>
+</body>
+
+</html>
