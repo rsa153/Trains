@@ -30,7 +30,7 @@ $(document).ready(function () {
 
 		$("#name").val("");
 		$("#destination").val("");
-		$("#time").val("");
+		$("#first-train").val("");
 		$("#frequency").val("");
 
 		return false;
